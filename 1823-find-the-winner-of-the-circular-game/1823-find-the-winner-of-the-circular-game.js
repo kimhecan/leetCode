@@ -3,10 +3,9 @@ var findTheWinner = function(n, k) {
   let array = new Array(n).fill(0).map((v, i) => i+1);
   let standingNumber = 1; 
   while(array.length > 1) {
-    let lastLength = array.length;
+    let arrayLength = array.length;
     const standingIndex = array.indexOf(standingNumber);
-    const removeIndex = (standingIndex + (k -1)) % lastLength
-    console.log(standingIndex, 'standingIndex')
+    const removeIndex = (standingIndex + (k -1)) % arrayLength
     array.splice(removeIndex, 1);
     if(removeIndex === array.length) {
     	standingNumber = array[0];  
