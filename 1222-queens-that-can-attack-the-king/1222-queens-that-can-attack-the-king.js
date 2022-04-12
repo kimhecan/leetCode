@@ -11,7 +11,7 @@ var queensAttacktheKing = function(queens, king) {
         let kingx = king[0];
         let kingy = king[1];
         let alreadyCheck = false; 
-        while(kingx < 8 && kingy < 8 && kingx >= 0 && kingy >= 0) {
+        while(kingx <= 8 && kingy <= 8 && kingx >= 0 && kingy >= 0) {
             kingx += t[i][0];
             kingy += t[i][1];
           for(let j=0;j<queens.length; j ++) {
